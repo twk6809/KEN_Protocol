@@ -1,0 +1,34 @@
+Ken's Electronic Network (KEN) Protocol  - Change Log
+=====================================================
+
+This record only covers official releases and not any interim development
+versions.  
+
+KEN-A
+-----
+
+### V1.0.1 - 2025-02-08
+- Renamed from KEN Protocol to KEN-A Protocol, A for Advanced. This was to
+  distinguish it from the new variations.
+- Corrected a few typos.
+- Added an Idle options for Connection Control and Error Control. This helps
+  with compatibility with KEN-B and KEN-C.
+
+### V1.0.0 - 2024-09-30
+- Baseline release.
+
+<div style="page-break-before: always;"></div>
+
+KEN-B
+-----
+
+### V1.0.0 - 2025-02-08
+- Baseline release. 
+
+<div style="page-break-before: always;"></div>
+
+KEN-C
+-----
+
+### V1.0.0 - 2025-02-08
+- Baseline release. 
