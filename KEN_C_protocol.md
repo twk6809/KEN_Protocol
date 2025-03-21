@@ -2,8 +2,8 @@ KEN-C PROTOCOL
 ==============
 
 By: Ken McCaughey  
-On: 2025-02-08  
-Ver 1.0.0  
+On: 2025-03-21  
+Ver 1.1.0  
 
 <!-- In MarkDownd format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
@@ -553,8 +553,9 @@ can help to determine if two systems might be compatible, or how close
 they might be. This is useful information to be included in source code
 comments.
 
-The type, or "flavor", of the KEN Basic protocol can be expressed with 
-a two digit hexadecimal number. See below for definitions. 
+The type, or "flavor", of the KEN Compact protocol can be expressed with 
+a two digit hexadecimal number. This is prefaced with the protocol version. 
+See below for definitions. 
 
 ### Features Used (set bits to '1' if used) (update)
         
@@ -579,18 +580,18 @@ a two digit hexadecimal number. See below for definitions.
 Below are some examples of different protocol types. Note that there are 
 numerous permutations. The examples below are from simple to more complex.
 
-Type `A2`
+Type `KEN-C:A2`
 - Frame length
 - Sequence number
 - Frame numbers
 
-Type `AE`
+Type `KEN-C:AE`
 - Frame length
 - Sequence number
 - From/to addressing
 - Frame numbers
 
-Type `AF`
+Type `KEN-C:AF`
 - Frame length
 - Checksum
 - Sequence number

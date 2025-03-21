@@ -2,8 +2,8 @@ KEN-B PROTOCOL
 ==============
 
 By: Ken McCaughey  
-On: 2025-02-08  
-Ver 1.0.0  
+On: 2025-03-21  
+Ver 1.1.0  
 
 <!-- In MarkDownd format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
@@ -625,7 +625,8 @@ they might be. This is useful information to be included in source code
 comments.
 
 The type, or "flavor", of the KEN Basic protocol can be expressed with 
-a two digit hexadecimal number. See below for definitions. 
+a two digit hexadecimal number. This is prefaced with the protocol version. 
+See below for definitions. 
 
 ### Features Used (set bits to '1' if used)
 
@@ -653,16 +654,16 @@ This is the same as the HCB.
 Below are some examples of different protocol types. Note that there are 
 numerous permutations. The examples below are from simple to more complex.
 
-Type `20`
+Type `KEN-B:20`
 - Frame length
 - Header Config Byte
 
-Type `2C`
+Type `KEN-B:2C`
 - Frame length
 - Header Config Byte
 - From/to addressing
 
-Type `2D`
+Type `KEN-B:2D`
 - Frame length
 - Header Config Byte
 - From/to addressing

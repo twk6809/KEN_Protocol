@@ -2,8 +2,8 @@ KEN-A PROTOCOL
 ==============
 
 By: Ken McCaughey  
-On: 2025-02-08  
-Ver 1.0.1  
+On: 2025-03-21  
+Ver 1.1.0  
 
 <!-- In MarkDownd format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
@@ -878,17 +878,17 @@ comments.
 
 The type, or "flavor", of the KEN protocol can be expressed with four 
 fields separated by dashes '-'. Each field is a two digit hexadecimal 
-number. See below for definitions. 
+number. This is prefaced with the protocol version. See below for definitions. 
 
 ### KEN Protocol Type
 
-    7F-FF-F4-3F  <--- All features supported or used!
-    -- -- -- --
-    |  |  |  | 
-    |  |  |  +------- Optional flags supported
-    |  |  +---------- Data types supported
-    |  +------------- Extended features 
-    +---------------- Features used (same as data that follows 0xF2 flag)
+    KEN-A:7F-FF-F4-3F  <--- All features supported or used!
+          -- -- -- --
+          |  |  |  | 
+          |  |  |  +------- Optional flags supported
+          |  |  +---------- Data types supported
+          |  +------------- Extended features 
+          +---------------- Features used (same as 0xF2 flag data)
 
 ### Features Used (set bits to '1' if used)
 
@@ -973,19 +973,19 @@ If these are supported, it does not necessarily mean they will be used.
 Below are some examples of different protocol types. Note that there are 
 numerous permutations. The examples below are from simple to more complex.
 
-Type `00-00-20-00`
+Type `KEN-A:00-00-20-00`
 
 - ASCII data type flag, beginning, and end of frame flags.
 - `FB FD [ASCII message] FE`
 
-Type `0C-00-20-00`
+Type `KEN-A:0C-00-20-00`
 
 - From/to addressing (simple only)
 - No extended features used.
 - ASCII data type.
 - `FB An Bn FD [ASCII message] FE`
 
-Type `2D-AC-20-00`
+Type `KEN-A:2D-AC-20-00`
 
 - Checksum, from/to addressing, data length.
 - Custom flag, extended addressing, extended data length.

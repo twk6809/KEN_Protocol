@@ -2,7 +2,7 @@ KEN PROTOCOL COMPARISON
 =======================
 
 By: Ken McCaughey  
-On: 2025-02-08  
+On: 2025-03-21  
 
 <!-- In MarkDownd format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
@@ -89,7 +89,7 @@ Below is a summary comparison table of differences.
 
 | Protocol Feature                     | KEN-A      | KEN-B      | KEN-C      |
 |:-------------------------------------|:-----------|:-----------|:-----------|
-| Current version                      | 1.0.1      | 1.0.0      | 1.0.0      |
+| Current version                      | 1.1.0      | 1.1.0      | 1.1.0      |
 | Hex viewer human readable frames     | Yes        | Yes        | Not really |
 | Maximum frame size                   | Unlimited  | 127-bytes  | 127-bytes  |
 | Unique start/end frame flags         | Yes        | No         | No         |
