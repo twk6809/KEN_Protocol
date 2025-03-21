@@ -7,6 +7,9 @@ versions.
 KEN-A
 -----
 
+### V1.1.0 - 2025-03-21
+- Added a prefix to the protocol type to indicate the protocol "flavor".
+
 ### V1.0.1 - 2025-02-08
 - Renamed from KEN Protocol to KEN-A Protocol, A for Advanced. This was to
   distinguish it from the new variations.
@@ -22,6 +25,9 @@ KEN-A
 KEN-B
 -----
 
+### V1.1.0 - 2025-03-21
+- Added a prefix to the protocol type to indicate the protocol "flavor".
+
 ### V1.0.0 - 2025-02-08
 - Baseline release. 
 
@@ -29,6 +35,9 @@ KEN-B
 
 KEN-C
 -----
+
+### V1.1.0 - 2025-03-21
+- Added a prefix to the protocol type to indicate the protocol "flavor".
 
 ### V1.0.0 - 2025-02-08
 - Baseline release. 
