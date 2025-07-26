@@ -1,7 +1,7 @@
 KEN PROTOCOL - README
 =====================
 By: Ken McCaughey  
-On: 2025-02-08  
+On: 2025-07-26  
 
 <!-- In MarkDownd format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
