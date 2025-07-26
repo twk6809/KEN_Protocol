@@ -2,10 +2,10 @@ KEN-C PROTOCOL
 ==============
 
 By: Ken McCaughey  
-On: 2025-03-21  
-Ver 1.1.0  
+On: 2025-07-26  
+Ver 1.2.0  
 
-<!-- In MarkDownd format. -->
+<!-- In MarkDown format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
 
 Ken's Electronic Network (KEN) Compact Protocol 
@@ -160,9 +160,9 @@ Frame highlights:
 - `~~` Data covered by checksum
 
 ```
-Framea Len [Header/Control Elements]  [Data] [Check]
-++++++++++ *************************  ====== ------ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Frame Len [Header/Control Elements]  [Data] [Check]
++++++++++ *************************  ====== ------ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1  2  3  4  5 <-- Header Bytes
 |  |  |  |  |
@@ -342,9 +342,11 @@ control to avoid too many consecutive zeros in the frame header.
     
     n = C = Checksum error.
     
+    n = D = Discontinue error control.
+    
     n = E = Error = Nack.
     
-    n = 2 to 4, 6 to 9, B, D, F = Reserved.
+    n = 2 to 4, 6 to 9, B, F = Reserved.
 
 
 ### Frame Number, Header Byte 5
@@ -557,7 +559,7 @@ The type, or "flavor", of the KEN Compact protocol can be expressed with
 a two digit hexadecimal number. This is prefaced with the protocol version. 
 See below for definitions. 
 
-### Features Used (set bits to '1' if used) (update)
+### Features Used (set bits to '1' if used)
         
     msb           lsb
     1 x 1 x   x x 1 x
@@ -575,7 +577,7 @@ See below for definitions.
 
 <div style="page-break-after: always;"></div>
 
-### Example Types (update)
+### Example Types
 
 Below are some examples of different protocol types. Note that there are 
 numerous permutations. The examples below are from simple to more complex.
@@ -722,7 +724,7 @@ Minimum message with one byte of data and 5-bytes of overhead.
 Twenty nine ASCII data bytes with minimum overhead and data length.
 5-bytes of overhead.
 
-    86 01 11 11 11 KEN B Protocol - Hello World!
+    86 01 11 11 11 KEN-C Protocol - Hello World!
     ++ ** ** ** ** =============================
 
 Forty eight bytes of CSV ASCII data with from addressing and split across 

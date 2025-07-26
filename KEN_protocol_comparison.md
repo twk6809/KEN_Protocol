@@ -2,9 +2,9 @@ KEN PROTOCOL COMPARISON
 =======================
 
 By: Ken McCaughey  
-On: 2025-03-21  
+On: 2025-07-26  
 
-<!-- In MarkDownd format. -->
+<!-- In MarkDown format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
 
 Ken's Electronic Network (KEN) Advanced Protocol 
@@ -37,8 +37,6 @@ frame structure for each variation is described.
 Reference the individual protocol specification documents for complete
 details on each variation. 
 
-<div style="page-break-after: always;"></div>
-
 ## KEN-A
 
 KEN-A is an Advanced feature rich and has a lot of flexibility. It does 
@@ -48,6 +46,8 @@ are binary (msb=1), making them easier to identify and parse. It also has
 features to avoid having to keep track of the length of the frame contents,
 thus permitting very long frames. It has features to allow for a lot of
 customization.
+
+<div style="page-break-after: always;"></div>
 
 ## KEN-B
 
@@ -83,36 +83,49 @@ be parsed based on frame position. The size of the data payload is a
 function of the maximum frame size minus the number of of header bytes 
 and checksum method, if used.
 
+## KEN-D 
+
+KEN-D is a minimalist version of KEN-C for data only. This has a compressed 
+header of fixed features and fixed size of 2-bytes. All features are nibble 
+based, and thus are limited in capabilities. As in KEN-C, the frame contents 
+are position dependent and rely on knowing the frame length. Since the header
+size is fixed, the start of the payload data is easily determined. There 
+are no issues with binary in the data payload. The data contents can be 
+ASCII, binary, or a mixture. Note that due to the nibble wise header 
+compression, the header can contain both binary and ASCII. The header must 
+be parsed based on frame position. The size of the data payload is a 
+function of the maximum frame size minus the number of of header bytes.
+
+
 <div style="page-break-after: always;"></div>
 
-Below is a summary comparison table of differences.
+Below is a summary comparison table of differences. (B = bytes)
 
-| Protocol Feature                     | KEN-A      | KEN-B      | KEN-C      |
-|:-------------------------------------|:-----------|:-----------|:-----------|
-| Current version                      | 1.1.0      | 1.1.0      | 1.1.0      |
-| Hex viewer human readable frames     | Yes        | Yes        | Not really |
-| Maximum frame size                   | Unlimited  | 127-bytes  | 127-bytes  |
-| Unique start/end frame flags         | Yes        | No         | No         |
-| Uses a header flag                   | Start/end  | Yes, HCB   | No         |
-| Frame flags                          | Yes        | Limited    | No         |
-| Requires frame breaks                | No         | Yes        | Yes        |
-| Header size                          | Variable   | Variable   | Fixed      |
-| Minimum header size                  | 2-bytes    | 2-bytes    | 5-bytes    |
-| Maximum header size (minus check)    | ~20-bytes  | 13-bytes   | 5-bytes    |
-| Headers elements have an ID flag     | Yes        | Yes        | None       |
-| Headers element flags msb=1          | Always     | Always     | N/A        |
-| Position dependent header elements   | Some       | All        | All        |
-| Allows for binary payload data       | Limited    | Yes        | Yes        |
-| Requires length information          | No         | Yes        | Yes        |
-| Length parameter covers...           | Data only  | Frame      | Frame      |
-| Headers reduce payload data size     | No         | Yes        | Yes        |
-| Maximum ASCII payload data w/o check | Unlimited  | 125-bytes  | 122-bytes  |
-| Maximum ASCII payload data w check   | Unlimited  | 122-bytes  | 120-bytes  |
-| Maximum binary payload data          | 127-bytes  | 125-bytes  | 122-bytes  |
-| Maximum addresses                    | 127        | 15         | 15         |
-| Maximum sub-frames                   | 127        | 15         | 15         |
-| Allows custom features               | Yes        | No         | No         |
-
+| Protocol Feature                   | KEN-A     | KEN-B     | KEN-C | KEN-D |
+|:-----------------------------------|:----------|:----------|:------|:------|
+| Current version                    | 1.2.0     | 1.2.0     | 1.2.0 | 1.0.0 |
+| Hex viewer human readable frames   | Yes       | Yes       | No    | No    |
+| Max frame size                     | Unlimited | 127B      | 127B  | 127B  |
+| Unique start/end frame flags       | Yes       | No        | No    | No    |
+| Uses a header flag                 | Start/end | Yes, HCB  | No    | No    |
+| Frame flags                        | Yes       | Limited   | No    | No    |
+| Requires frame breaks              | No        | Yes       | Yes   | Yes   |
+| Header size                        | Variable  | Variable  | Fixed | Fixed |
+| Minimum header size                | 2B        | 2B        | 5B    | 2B    |
+| Max header size (minus check)      | ~20B      | 13B       | 5B    | 2B    |
+| Headers elements have an ID flag   | Yes       | Yes       | None  | None  |
+| Headers element flags msb=1        | Always    | Always    | N/A   | N/A   |
+| Position dependent header elements | Some      | All       | All   | All   |
+| Allows for binary payload data     | Limited   | Yes       | Yes   | Yes   |
+| Requires length information        | No        | Yes       | Yes   | Yes   |
+| Length parameter covers...         | Data only | Frame     | Frame | Frame |
+| Headers reduce payload data size   | No        | Yes       | Yes   | Yes   |
+| Max ASCII payload data w/o check   | Unlimited | 125B      | 122B  | 125B  |
+| Max ASCII payload data w check     | Unlimited | 122B      | 120B  | N/A   |
+| Max binary payload data            | 127B      | 125B      | 122B  | 125B  |
+| Max addresses                      | 127       | 15        | 15    | 15    |
+| Max sub-frames                     | 127       | 15        | 15    | N/A   |
+| Allows custom features             | Yes       | No        | No    | N/A   |
 
 <div style="page-break-after: always;"></div>
 
@@ -227,9 +240,9 @@ Frame highlights:
 - `~~` Data covered by checksum
 
 ```
-Framea Len [Header/Control Elements]  [Data] [Check]
-++++++++++ *************************  ====== ------ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Frame Len [Header/Control Elements]  [Data] [Check]
++++++++++ *************************  ====== ------ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1  2  3  4  5 <-- Header Bytes
 |  |  |  |  |
@@ -249,6 +262,40 @@ FL 89 AB CE Ff [Data] [Check]
 
  # optional, size depends on checksum type
 ```
+
+<div style="page-break-after: always;"></div>
+
+--------------------------------------------------------------------------
+
+## KEN-D FRAME FORMAT
+
+All message frames begin with a Frame Length (FL) byte with msb = 1. The
+only header control bytes are the to/from address. The FL is of the entire 
+frame. Therefore the maximum frame size is 127 bytes. Payload data can range 
+from 0 bytes to 125, with no checksum.
+
+Frame highlights:
+- `++` Frame length (FL)
+- `**` Header control elements (hexadecimal)
+- `==` Frame payload data
+
+
+```
+Frame Len [Addressing] [Data]
++++++++++ ************ ======
+
+1  2  <-- Header Bytes
+|  |  
+FL AB [Data] 
+++ ** ====== 
+|  || |            
+|  || +--payload data
+|  |+--to address
+|  +---from address
++--frame length (FL) 
+
+```
+
 --------------------------------------------------------------------------
 
 # END OF DOCUMENT

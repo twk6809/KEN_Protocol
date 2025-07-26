@@ -2,10 +2,10 @@ KEN-A PROTOCOL
 ==============
 
 By: Ken McCaughey  
-On: 2025-03-21  
-Ver 1.1.0  
+On: 2025-07-26  
+Ver 1.2.0  
 
-<!-- In MarkDownd format. -->
+<!-- In MarkDown format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
 
 Ken's Electronic Network (KEN) Advanced Protocol 
@@ -526,11 +526,13 @@ This flag can only appear once in a frame.
     
     n = C = Checksum error.
     
+    n = D = Discontinue error control.
+    
     n = E = Error = Nack.
     
     n = F = Follow on ASCII byte has custom error code.
     
-    n = 2 to 4, 6 to 9, B, D = Reserved.
+    n = 2 to 4, 6 to 9, B = Reserved.
 
 Examples:
 

@@ -2,10 +2,10 @@ KEN-B PROTOCOL
 ==============
 
 By: Ken McCaughey  
-On: 2025-03-21  
-Ver 1.1.0  
+On: 2025-07-26  
+Ver 1.2.0  
 
-<!-- In MarkDownd format. -->
+<!-- In MarkDown format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
 
 Ken's Electronic Network (KEN) Basic Protocol 
@@ -390,9 +390,11 @@ for the custom error code.
     
     n = C = Checksum error.
     
+    n = D = Discontinue error control.
+    
     n = E = Error = Nack.
     
-    n = 2 to 4, 6 to 9, B, D, F = Reserved.
+    n = 2 to 4, 6 to 9, B, F = Reserved.
 
 Examples:
 

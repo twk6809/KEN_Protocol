@@ -1,20 +1,20 @@
 KEN PROTOCOL - LICENSE
 ======================
 By: Ken McCaughey  
-On: 2025-02-08  
+On: 2025-07-26  
   
 
-<!-- In MarkDownd format. -->
+<!-- In MarkDown format. -->
 <!-- Page breaks set for MarkText, US letter, with 10 top & bot.-->
 
 
 ## LICENSE
 
-<!--Ken's Electronic Network (KEN) Protocol (including KEN-A, KEN-B, and 
-KEN-C), © 2025 by Ken McCaughey is licensed under CC BY-SA 4.0. To view a 
+<!--Ken's Electronic Network (KEN) Protocol (including KEN-A, KEN-B, KEN-C,
+and Ken-D), © 2025 by Ken McCaughey is licensed under CC BY-SA 4.0. To view a 
 copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/ --> 
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ken's Electronic Network (KEN) Protocol (including KEN-A, KEN-B, and KEN-C), copyright 2025, </span> by <span property="cc:attributionName">Ken McCaughey</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ken's Electronic Network (KEN) Protocol (including KEN-A, KEN-B, KEN-C, and KEN-D), copyright 2025, </span> by <span property="cc:attributionName">Ken McCaughey</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
 ### You are free to:
 
