@@ -260,26 +260,27 @@ This is intended for point designs, not general compatibility with other
 KEN Data protocol designs (or the original KEN protocol for that matter).
 If more features are needed, then choose one of the different versions.
 
-If the addressing is not needed, then just ignore the second byte.
+This protocol is designed for ASCII or binary data. Parsing the data is 
+completely dependent on position in the frame. This saves overhead. The 
+original KEN protocol utilized flags to locate frame components with an 
+overhead penalty.
+
+If the addressing is not needed, then just ignore the second byte. If the 
+data is all ASCII and the from address is limited to <=7 (msb=0) then the
+only byte with the msb=1 would be the frame length. The receiver could 
+then trigger off the msb of the first byte of a frame.
 
 Since the header and data payload can all be binary characters, and there 
 is no escape character, and no unique flags; any implementation must 
 include idle breaks between frames.
 
 All features are nibble based, and thus are limited in capabilities. As 
-in KEN-C, the frame contents are position dependent and rely on knowing 
-the frame length. Since the header size is fixed, the start of the payload 
-data is easily determined.
+in KEN-C, the frame contents are position dependent. Since the header 
+size is fixed, the start of the payload data is easily determined. The 
+header can contain both binary or ASCII.
 
-Note that due to the nibble wise header compression, the header can 
-contain both binary and ASCII. The header must be parsed based on frame 
-position. The size of the data payload is a function of the maximum frame 
-size minus the number of of header bytes.
-
-This protocol is designed for ASCII or binary data. Parsing the data is 
-completely dependent on position in the frame. This saves overhead. The 
-original KEN protocol utilized flags to locate frame components with an 
-overhead penalty.
+If some additional features are needed, the developer could define then
+as part of the data payload.
 
 Any application should specify the Protocol Type prominently in the code 
 comments. Be sure to update this when making any application revisions.
