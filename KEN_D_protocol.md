@@ -234,20 +234,20 @@ See below for definitions.
 ### Features Used (set bits to '1' if used)
         
     msb           lsb
-    0 0 0 0   1 1 0 0
+    0 0 1 0   1 1 0 0
     - - - -   - - - -
     | | | |   | | | |
     | | | |   | | | +-- not defined, always 0
     | | | |   | | +---- not defined, always 0
-    | | | |   | +------ from address (An), required
-    | | | |   +-------- to address (Bn), required
+    | | | |   | +------ from address (An), always required
+    | | | |   +-------- to address (Bn), always required
     | | | | 
     | | | +------------ not defined, always 0
-    | | +-------------- not defined, always 0
+    | | +-------------- frame length, always required
     | +---------------- not defined, always 0
     +------------------ not defined, always 0
 
-Type `KEN-D:0D`
+Type `KEN-D:2D`
 - From/to addressing
 
 <div style="page-break-after: always;"></div>
