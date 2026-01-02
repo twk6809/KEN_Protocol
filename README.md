@@ -66,7 +66,7 @@ These are the things NOT included or specified in this protocol:
 
 [VARIATIONS](https://github.com/twk6809/KEN_Protocol/blob/main/KEN_protocol_comparison.md)
 
-There are currently three variations. Each has its own specification 
+There are currently four variations. Each has its own specification 
 document. These are not compatible with each other. However they share a 
 lot of commonalities and capabilities that would permit code reuse. Each 
 of these require different techniques to parse the frames. The overhead
